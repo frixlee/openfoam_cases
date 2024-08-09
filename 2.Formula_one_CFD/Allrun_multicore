@@ -1,0 +1,23 @@
+#https://github.com/frixlee/openfoam_cases
+
+#!/bin/bash
+
+foamListTimes -rm 
+
+blockMesh
+
+surfaceFeatures
+
+decomposePar -force
+
+foamJob -parallel -screen snappyHexMesh -overwrite
+
+reconstructParMesh -constant
+
+decomposePar -force
+
+foamJob -parallel -screen potentialFoam
+
+foamJob -parallel -screen simpleFoam
+
+reconstructPar

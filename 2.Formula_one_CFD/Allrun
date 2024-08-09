@@ -1,0 +1,15 @@
+#https://github.com/frixlee/openfoam_cases
+
+#!/bin/bash
+
+foamListTimes -rm 
+
+blockMesh
+
+surfaceFeatures
+
+snappyHexMesh -overwrite
+
+potentialFoam
+
+simpleFoam
