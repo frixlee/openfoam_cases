@@ -1,0 +1,28 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+upperWall
+{
+    type  noSlip;
+}
+
+Front
+{
+    type  noSlip;
+}
+
+Back
+{
+    type  noSlip;
+}
+ 
+lowerWall
+{
+    type  noSlip;
+}
+// ************************************************************************* //
